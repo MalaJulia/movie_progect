@@ -1,5 +1,5 @@
 import './App.css';
-import {MoviesList} from "./components";
+import {Genres, MoviesList} from "./components";
 
 function App() {
 
@@ -12,6 +12,7 @@ function App() {
 button
       </button>,
       <MoviesList/>
+      // <Genres/>
   );
 }
 

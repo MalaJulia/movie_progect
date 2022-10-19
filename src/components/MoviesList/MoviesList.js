@@ -1,26 +1,50 @@
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
+import {useSearchParams} from "react-router-dom";
 
 
 import { movieActions} from "../../slices";
 import { MovieService } from "../../service"
 import {MovieListCard} from "../MoviasListCard/MovieListCard";
 
-const MoviesList = () => {
-    const dispatch = useDispatch();
 
-   const { movie } = useSelector(state => state.movieReducer)
+const MoviesList = () => {
+
+
+    const [prev, setPrev] = useState (null)
+    const [next, setNext] = useState(null)
+
+    const dispatch = useDispatch();
+    const [query, setQuery] = useSearchParams ({page: '1'})
+
+   const {movie} = useSelector(state => state.movieReducer)
 
     useEffect(() => {
-        MovieService.getAll().then(({data}) => {
-            dispatch(movieActions.getAll(data?.results))
-        })
-    },[])
+        const page = query.get('page');
+  dispatch(movieActions.getAll({page}))
 
+    },[query])
+
+
+    const  prevPage = () => {
+        setQuery(value=>({page:value.get('page')-1}))
+
+    }
+
+    const  nextPage = () => {
+        setQuery(value=>({page:+value.get('page')+1}))
+
+    }
     return (
         <div>
+            <button onClick={prevPage}>Prev page</button>
+            <button onClick={nextPage}>Next page</button>
+            <hr/>
             {movie.map(mov => <MovieListCard key={mov.id} mov={mov}/> )}
+
+
         </div>
+
     )
 }
 export {MoviesList}

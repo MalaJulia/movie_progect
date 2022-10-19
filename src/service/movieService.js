@@ -4,8 +4,8 @@ import {urls} from "../config";
 
 
 
-const MovieService ={
-    getAll:() => axiosService.get(urls.movie)
+const MovieService = {
+    getAll:(page  = '1') => axiosService.get(urls.movie, {params:{page}})
 }
 
 
