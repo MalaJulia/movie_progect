@@ -8,11 +8,12 @@ function App() {
     }
 
   return (
-      <button onClick={som}>
-button
-      </button>,
+<>
+      <button onClick={som}>button
+      </button>
       <MoviesList/>
-      // <Genres/>
+      <Genres/>
+</>
   );
 }
 

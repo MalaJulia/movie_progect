@@ -19,12 +19,10 @@ const Genres = () => {
     console.log(genres)
     return (
         <div>
-     {genres.map(genre => <Genre key={genre.id} genre={genre}/> )
-         //TODO Genres вызов функции в муви
-
-
+     {genres.map(genre => <Genre key={genre.id} genre={genre}/>)}
         </div>
 
-    )
+         )
 }
 export {Genres}
+            //TODO Genres вызов функции в муви

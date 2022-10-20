@@ -37,7 +37,7 @@ const genreSlice = createSlice ({
     extraReducers: {
         [getAllGenres.fulfilled]:(state, action)=> {
             console.log(action.payload, 'action.payload', typeof action.payload)
-            state.genres = action.payload.results
+            state.genres = action.payload.genres
         }
     }
 })

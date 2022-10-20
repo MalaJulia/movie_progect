@@ -1,7 +1,7 @@
-const Genre = () => {
-
+const Genre = ({genre}) => {
+const{id, name} = genre
     return (
-        <div></div>
+        <div>{name}</div>
     )
 }
 export {Genre}
