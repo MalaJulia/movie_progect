@@ -1,18 +1,22 @@
-import './App.css';
-import {Genres, MoviesList} from "./components";
+import { Headers, MovieListCard, MovieInfo, MoviesList} from "./components";
+
+
+import {Navigate, Route, Routes} from "react-router-dom";
+import {MainLayout} from "./layaut/MainLayaut";
 
 function App() {
 
-    const som = () => {
-
-    }
 
   return (
 <>
-      <button onClick={som}>button
-      </button>
-      <MoviesList/>
-      <Genres/>
+    <Headers/>
+
+    <Routes>
+        <Route path={'/'} element={<MoviesList/>}/>
+
+            <Route path={'movie/:id'} element={<MovieInfo/>}/>
+
+    </Routes>
 </>
   );
 }

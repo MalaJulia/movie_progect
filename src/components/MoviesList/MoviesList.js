@@ -1,11 +1,11 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
-import {useSearchParams} from "react-router-dom";
+import { useSearchParams} from "react-router-dom";
 
 
 import { movieActions} from "../../slices";
-import { MovieService } from "../../service"
 import {MovieListCard} from "../MoviasListCard/MovieListCard";
+
 
 
 const MoviesList = () => {
@@ -37,11 +37,11 @@ const MoviesList = () => {
     }
     return (
         <div>
+            {/*TODO: сделать чтоб не переходило на -1 стр и более 500*/}
             <button onClick={prevPage}>Prev page</button>
             <button onClick={nextPage}>Next page</button>
             <hr/>
             {movie.map(mov => <MovieListCard key={mov.id} mov={mov}/> )}
-
 
         </div>
 

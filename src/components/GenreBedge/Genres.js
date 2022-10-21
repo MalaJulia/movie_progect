@@ -1,28 +1,19 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {movieActions} from "../../slices";
 import {MovieListCard} from "../MoviasListCard/MovieListCard";
 import {genresReducer,genresActions} from "../../slices";
 import {useDispatch, useSelector} from "react-redux";
 import {Genre} from "./Genre";
+import {useParams} from "react-router-dom";
 
-const Genres = () => {
-    const{genres} = useSelector(state => state.genresReducer)
-    const dispatch = useDispatch();
-
-
-    useEffect(() => {
-
-        dispatch(genresActions.getAllGenres())
-
-    },[])
-
-    console.log(genres)
-    return (
-        <div>
-     {genres.map(genre => <Genre key={genre.id} genre={genre}/>)}
-        </div>
-
-         )
-}
-export {Genres}
-            //TODO Genres вызов функции в муви
+// const Genres = () => {
+//
+//     console.log(genres)
+//     return (
+//         <div>
+//      {genres.map(genre => <Genre key={genre.id} genre={genre}/>)}
+//         </div>
+//
+//          )
+// }
+// export {Genres}
