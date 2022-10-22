@@ -29,11 +29,7 @@ const getAllGenres = createAsyncThunk(
 const genreSlice = createSlice ({
     name: 'genreSlice',
     initialState,
-    reducers:{
-        // getAll:(state, action) => {
-        //     state.movie = action.payload
-        // }
-    },
+    reducers:{},
     extraReducers: {
         [getAllGenres.fulfilled]:(state, action)=> {
             console.log(action.payload, 'action.payload', typeof action.payload)

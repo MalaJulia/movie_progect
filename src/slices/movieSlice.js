@@ -6,7 +6,6 @@ import {MovieService} from "../service";
 
 const  initialState = {
     movie: [],
-    currentMovie: null,
     loading: false,
     error: null
 }
@@ -30,11 +29,7 @@ const getAll = createAsyncThunk(
 const movieSlice = createSlice ({
         name: 'movieSlice',
     initialState,
-    reducers:{
-            // getAll:(state, action) => {
-            //     state.movie = action.payload
-            // }
-    },
+    reducers:{},
     extraReducers: {
         [getAll.fulfilled]:(state, action)=> {
             console.log(action.payload, 'action.payload', typeof action.payload)

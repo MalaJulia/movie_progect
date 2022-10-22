@@ -1,19 +1,18 @@
-import { Headers, MovieListCard, MovieInfo, MoviesList} from "./components";
+import { Route, Routes} from "react-router-dom";
 
+import {Theme} from "./components/themes";
 
-import {Navigate, Route, Routes} from "react-router-dom";
-import {MainLayout} from "./layaut/MainLayaut";
+import { Headers, MovieInfo, MoviesList} from "./components";
 
 function App() {
-
 
   return (
 <>
     <Headers/>
-
+    <Theme/>
     <Routes>
-        <Route path={'/'} element={<MoviesList/>}/>
 
+        <Route path={'/'} element={<MoviesList/>}/>
             <Route path={'movie/:id'} element={<MovieInfo/>}/>
 
     </Routes>

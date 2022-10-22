@@ -1,6 +1,7 @@
 import StarRatings from "react-star-ratings/build/star-ratings";
 import { useEffect, useState} from "react";
 
+
 const StarRating = ({rating = 0, starDimension, starSpacing}) => {
     const [stateRating, setstateRating] = useState(0);
 
@@ -15,12 +16,16 @@ const StarRating = ({rating = 0, starDimension, starSpacing}) => {
             // rating = 2;
             return (
                 <StarRatings
+
                     rating={stateRating}
                     starRatedColor="blue"
                     changeRating={changeRating}
                     numberOfStars={10}
                     name='rating'
+                    starDimension="15px"
+                    starSpacing="3px"
                 />
-            )
-}
+            )}
+
+
 export { StarRating }
