@@ -2,6 +2,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
 import { useSearchParams} from "react-router-dom";
 
+import './MovieList.css'
+
 
 import { movieActions} from "../../slices";
 import {MovieListCard} from "../MoviasListCard/MovieListCard";
@@ -36,10 +38,14 @@ const MoviesList = () => {
 
     }
     return (
-        <div>
+
+
+    <div className={"container"}>
             {/*TODO: сделать чтоб не переходило на -1 стр и более 500*/}
-            <button onClick={prevPage}>Prev page</button>
-            <button onClick={nextPage}>Next page</button>
+        {/*<div className={"btn"}>*/}
+        <button id={'prev'} onClick={prevPage}>Prev page</button>
+        <button id={'next'} onClick={nextPage}>Next page</button>
+        {/*</div>*/}
             <hr/>
             {movie.map(mov => <MovieListCard key={mov.id} mov={mov}/> )}
 

@@ -3,12 +3,12 @@ import {createGlobalStyle} from "styled-components";
 const darkTheme = {
     body: "#000",
     textColor: "#fff",
-    headingColor: "lightblue"
+    headingColor: "#fff"
 
 }
 const lightTheme = {
-    body: "#fff",
-    textColor: "#000",
+    body: "#f1e7d7",
+    textColor: "#4b2d2d",
     headingColor: "#d23669"
 }
 
@@ -19,8 +19,9 @@ const GlobalStyles = createGlobalStyle`
   transition: .3s ease;
  }
  h2{
-   color: ${props => props.theme.headingColor};
+   color: ${props => props.theme.headingColor};   
  }
+
 `
 
 export {

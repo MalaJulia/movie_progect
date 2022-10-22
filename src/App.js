@@ -1,13 +1,14 @@
 import { Route, Routes} from "react-router-dom";
 
 import {Theme} from "./components/themes";
+import "./App.css"
 
 import { Headers, MovieInfo, MoviesList} from "./components";
 
 function App() {
 
   return (
-<>
+<div className={"container"}>
     <Headers/>
     <Theme/>
     <Routes>
@@ -16,7 +17,7 @@ function App() {
             <Route path={'movie/:id'} element={<MovieInfo/>}/>
 
     </Routes>
-</>
+</div>
   );
 }
 

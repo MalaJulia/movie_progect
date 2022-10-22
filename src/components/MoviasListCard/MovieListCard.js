@@ -31,17 +31,18 @@ const MovieListCard = ({mov}) => {
 
     return (
 
-        <div className={'container'}>
-            <Link to={'/movie/'+id} state={{...mov}}>  <h2>{title}</h2> </Link>
+        <div className={'container'} id={'movie'}>
+            <Link className={"link"} style={{ textDecoration: 'none'}} to={'/movie/'+id} state={{...mov}}>
+              <h2>{title}</h2>
             <p className={'overview'}>{overview}</p>
             <img src={postUrl}  alt="poster" className={'poster'}/>
             <StarRating  className={'star'} rating={vote_average}/>
 
-<div>
+<div className={"genre"}>
     {genres.map(genre => {
     return  genre_ids.includes(genre.id) ?  <Genre key={genre.id} genre={genre}/> : null})}
 </div>
-
+        </Link>
         </div>
       )
 
