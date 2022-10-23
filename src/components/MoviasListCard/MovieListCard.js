@@ -10,6 +10,7 @@ import {Genre} from "../GenreBedge/Genre";
 import {genresActions} from "../../slices";
 
 
+
 const MovieListCard = ({mov}) => {
     const {title,overview, poster_path,vote_average,genre_ids, id } = mov
     console.log(poster_path)
@@ -30,10 +31,10 @@ const MovieListCard = ({mov}) => {
     },[])
 
     return (
-
-        <div className={'container'} id={'movie'}>
+<>
+        <div className={'movieListContainer'} id={'movie'}>
             <Link className={"link"} style={{ textDecoration: 'none'}} to={'/movie/'+id} state={{...mov}}>
-              <h2>{title}</h2>
+              <h4>{title}</h4>
             <p className={'overview'}>{overview}</p>
             <img src={postUrl}  alt="poster" className={'poster'}/>
             <StarRating  className={'star'} rating={vote_average}/>
@@ -44,6 +45,8 @@ const MovieListCard = ({mov}) => {
 </div>
         </Link>
         </div>
+
+</>
       )
 
 }

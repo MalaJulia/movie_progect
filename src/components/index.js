@@ -1,10 +1,7 @@
-export * from './GenreBedge/GenreBedge'
 export * from './Headers/Headers'
 export * from './MoviasListCard/MovieListCard'
 export * from './MovieInfo/MovieInfo'
 export * from './MoviesList/MoviesList'
 export * from './StarsRating/StarRating'
-export * from './UserInfo/UserInfo'
 export * from './GenreBedge/Genre'
-export *from './GenreBedge/Genres'
-
+export * from './Headers/Button'

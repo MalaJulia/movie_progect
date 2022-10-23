@@ -9,7 +9,8 @@ const darkTheme = {
 const lightTheme = {
     body: "#f1e7d7",
     textColor: "#4b2d2d",
-    headingColor: "#d23669"
+    headingColor: "#d23669",
+
 }
 
 const GlobalStyles = createGlobalStyle`
@@ -21,6 +22,10 @@ const GlobalStyles = createGlobalStyle`
  h2{
    color: ${props => props.theme.headingColor};   
  }
+ div{
+    background: ${props => props.theme.body};   
+ }
+ 
 
 `
 

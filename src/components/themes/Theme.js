@@ -15,8 +15,8 @@ const switchTheme = () => {
 return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <GlobalStyles />
-        <div>
-            <button onClick={switchTheme}>Switch Theme</button>
+        <div className={'header'}>
+            <button className={"click"} onClick={switchTheme}>Switch</button>
         </div>
     </ThemeProvider>
 );

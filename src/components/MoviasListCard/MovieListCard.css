@@ -1,30 +1,12 @@
-/*body {*/
-/*       display: flex;*/
-/*       justify-content:space-between;*/
-/*       align-items: center;*/
-/*    box-sizing: border-box;*/
-/*    flex-wrap: wrap;*/
-/*    flex-direction: column;*/
-
-/*}*/
-body{
-    background: wheat;
-}
-
-.container {
+.movieListContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
+    align-items: center;
+    flex-direction:row;
   flex-wrap: wrap;
 
-
-
-
 }
-/*    !*flex-wrap: wrap;*!*/
-/*    !*flex-direction: column;*!*/
 
-
-/*}*/
 .poster {
     width: 200px;
     height: 250px;
@@ -33,20 +15,13 @@ body{
     align-items: center;
 }
 
-/*.overview {*/
-/*    width: 20%;*/
-/*    height: 20%;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    font-size: x-small;*/
-/*    flex-wrap: wrap;*/
-/*    flex-direction: column;*/
-/*}*/
 .genre{
     color:red;
     font-size: small;
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
 
 
 }
@@ -66,18 +41,15 @@ h2 {
     justify-content: center;
     align-items: center;
     border-radius: 10%;
-    /*background: bisque;*/
     margin: 10px;
-
-
-
+    overflow: hidden;
+    font-size: small
 }
 p {
-    margin: 5px;
+    margin: 10px;
+    width: 400px;
 }
-.overview{
-    /*color: inherit; */
-}
+
 
 .link {
     color:inherit;

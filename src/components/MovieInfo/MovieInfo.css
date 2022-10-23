@@ -1,0 +1,21 @@
+#details {
+    width: 600px;
+}
+
+.movieInfo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+#property {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 40px;
+
+
+}
+

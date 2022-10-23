@@ -2,8 +2,14 @@ import {useLocation} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
 
+import './MovieInfo.css'
+
 import {Genre} from "../GenreBedge/Genre";
 import {genresActions} from "../../slices";
+
+
+
+
 
 
 const MovieInfo = () => {
@@ -24,20 +30,36 @@ const MovieInfo = () => {
 
 
     return (
-        <div>
-            <h1>{movieDetails.title}</h1>
-            <div>{movieDetails.original_language}</div>
-            <div>{movieDetails.overview}</div>
-            <div>{movieDetails.popularity}</div>
-            <div>{movieDetails.release_date}</div>
-            <div>{movieDetails.vote_average}</div>
-            <div>{movieDetails.vote_count}</div>
-            <img src={posterUrl}  alt="poster"/>
+        <div className={'movieInfo'}>
+            <div>
+                 <h1>{movieDetails.title}</h1>
+            <hr/>
+            <img className={'backdrop'} src={posterUrl}  alt="poster"/>
 
-            <div>  {genres.map(genre => {
-                return  movieDetails.genre_ids.includes(genre.id) ?  <Genre key={genre.id} genre={genre}/> : null})}
+            <hr/>
+            <div id={"details"}>Overview: {movieDetails.overview}</div>
             </div>
-        </div>
+            <hr/>
+            <div id={'property'}>
+                <div id={'data'}><h5>Release date:</h5>{movieDetails.release_date} </div>
+                <div><h5> Original language:</h5>{movieDetails.original_language}</div>
+
+            <div><h5>Popularity:</h5> {movieDetails.popularity}</div>
+
+            <div><h5>Vote average:</h5>{movieDetails.vote_average}</div>
+
+
+            <div><h5>Vote count:</h5> {movieDetails.vote_count}</div>
+
+
+                <div> <h5>Genre:</h5>  {genres.map(genre => {
+                    return  movieDetails.genre_ids.includes(genre.id) ?  <Genre key={genre.id} genre={genre}/> : null})}
+                </div>
+
+
+            </div>
+</div>
+
     )
 }
 export {MovieInfo}
