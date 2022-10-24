@@ -39,7 +39,6 @@ const movieSlice = createSlice ({
     })
 
 
-
 const {reducer:movieReducer} = movieSlice
 
 const movieActions = {
@@ -48,5 +47,6 @@ const movieActions = {
 
 export {
     movieActions,
-    movieReducer
+    movieReducer,
+
 }

@@ -13,18 +13,19 @@ import {genresActions} from "../../slices";
 
 const MovieListCard = ({mov}) => {
     const {title,overview, poster_path,vote_average,genre_ids, id } = mov
-    console.log(poster_path)
+    console.log(mov, 'movvvvv')
 
     let postUrl = "https://image.tmdb.org/t/p/w500/" + poster_path
     console.log(postUrl)
 
     const {genres} = useSelector(state => state.genresReducer)
+    console.log(genres, 'genres')
 
     const dispatch = useDispatch();
 
     // const {id}=useParams()
 
-    useState(null)
+    // useState(null)
     useEffect(() => {
         dispatch(genresActions.getAllGenres())
         console.log(genres, '==')

@@ -4,7 +4,7 @@ import { Route, Routes} from "react-router-dom";
 
 import "./App.css"
 
-import { Headers, MovieInfo, MoviesList} from "./components";
+import {Headers, MovieInfo, MoviesList, Search, SearchFilm} from "./components";
 
 function App() {
 
@@ -15,8 +15,10 @@ function App() {
 
     <Routes>
         <Route path={'/'} element={<MoviesList/>}/>
+        <Route path={'search'} element={<SearchFilm/>}/>
         <Route path={'movie/:id'} element={<MovieInfo/>}/>
     </Routes>
+
 
 </div>
   );

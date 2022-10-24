@@ -24,9 +24,12 @@ const MoviesList = () => {
     },[query])
 
 
+
+
     return (
 
     <>
+
         <div className={"movieListContainer"}>
             {movie.map(mov => <MovieListCard key={mov.id} mov={mov}/> )}
 
