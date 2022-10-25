@@ -35,8 +35,8 @@ const Button= () => {
 return (
     <div className={'button'}>
 
-    <button className={'click'} onClick={prevPage}>Prev</button>
-    <button className={'click'} onClick={nextPage}>Next</button>
+    <button disabled={query.get('page') === "1"} className={'click'} onClick={prevPage}>Prev</button>
+    <button disabled={query.get('page') === "500"}className={'click'} onClick={nextPage}>Next</button>
     </div>
 )
 }
